@@ -17,6 +17,7 @@ class LogStash::Outputs::Site24x7 < LogStash::Outputs::Base
   default :codec, "json"
 
   config :log_type_config,:validate => :string, :required => true
+  config :log_source,:validate => :string, :required => false, :default => Socket.gethostname
   config :max_retry, :validate => :number, :required => false,  :default => 3
   config :retry_interval, :validate => :number, :required => false, :default => 2
 	
@@ -47,7 +48,6 @@ class LogStash::Outputs::Site24x7 < LogStash::Outputs::Base
     @s247_custom_regex = if @logtype_config.has_key? 'regex' then Regexp.compile(@logtype_config['regex'].gsub('?P<','?<')) else nil end
     @s247_ignored_fields = if @logtype_config.has_key? 'ignored_fields' then @logtype_config['ignored_fields'] else [] end
     @s247_tz = {'hrs': 0, 'mins': 0} #UTC
-    @log_source = Socket.gethostname
     @valid_logtype = true
     @log_upload_allowed = true
     @log_upload_stopped_time = 0

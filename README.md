@@ -29,6 +29,7 @@ Property | Description | Default Value
 log_type_config | log_type_config of your configured log type in site24x7 | nil
 max_retry | Number of times to resend failed uploads | 3
 retry_interval |  Time interval to sleep initially between retries, exponential step-off | 2 seconds
+log_source | Define custom values, such as the name of the server or environment from where the logs originate | Hostname 
 ## Need Help?
 
 If you need any support please contact us at support@site24x7.com.

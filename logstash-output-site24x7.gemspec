@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name          = 'logstash-output-site24x7'
-  s.version       = '0.1.0'
+  s.version       = '0.1.1'
   s.licenses      = ['']
   s.summary       = 'Site24x7 output plugin for Logstash event collector'
   s.homepage      = 'https://github.com/site24x7/logstash-output-site24x7'
