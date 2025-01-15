@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.summary       = 'Site24x7 output plugin for Logstash event collector'
   s.homepage      = 'https://github.com/site24x7/logstash-output-site24x7'
   s.authors       = ['Magesh Rajan']
-  s.email         = 'magesh.rajan@zohocorp.com'
+  s.email         = 'support@site24x7.com'
   s.require_paths = ['lib']
 
   # Files
